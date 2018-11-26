@@ -379,3 +379,34 @@ df = pd.DataFrame({'return':opt_portfolio[1], 'volatility':opt_portfolio[2]},
 df
 return	volatility
 optimal portfolio	0.162502	0.153377
+
+
+
+from decorators import debug, timer
+
+@timer
+def waste_time(self, num_times):
+    for _ in range(num_times):
+        sum([i**2 for i in range(self.max_num)])
+            
+waste_time(999)
+
+def entry_exit(f):
+    def new_f():
+        print("Entering", f.__name__)
+        f()
+        print("Exited", f.__name__)
+    return new_f
+
+@entry_exit
+def func1():
+    print("inside func1()")
+
+@entry_exit
+def func2():
+    print("inside func2()")
+
+func1()
+func2()
+print(func1.__name__)
+print(func2.__name__)
