@@ -49,3 +49,4 @@ today = datetime.datetime.combine(datetime.date.today(), datetime.datetime.min.t
 df_eps = mgr.historicalRequest('SPX Index', 'INDX_WEIGHTED_EST_ERN', datetime.datetime(today.year-5, today.month, today.day), today,**para1, overrides = {'BESTFPERIOD_OVERRIDE' : '1BF'})
 
 a_eps = mgr.historicalRequest('AAPL US Equity', 'BEST_EPS', datetime.datetime(today.year-5, today.month, today.day), today,**para1, overrides = {'BESTFPERIOD_OVERRIDE' : '1BF'})
+##。。。。####
