@@ -10,8 +10,7 @@ import blpinterface.blp_interface as blp
 import datetime
 #blp = blp.BLPInterface()
 #a = blp.referenceRequest(['CNR CN Equity', 'CP CN Equity'], ['SECURITY_NAME_REALTIME', 'LAST_PRICE'])
-######## test test 11/4/2018
-### test Q1
+
 #aapl = Price("AAPL US")
 #a = aapl.price
 para = {'adjustmentFollowDPDF':True,'nonTradingDayFillOption':"ALL_CALENDAR_DAYS"}
@@ -49,4 +48,11 @@ today = datetime.datetime.combine(datetime.date.today(), datetime.datetime.min.t
 df_eps = mgr.historicalRequest('SPX Index', 'INDX_WEIGHTED_EST_ERN', datetime.datetime(today.year-5, today.month, today.day), today,**para1, overrides = {'BESTFPERIOD_OVERRIDE' : '1BF'})
 
 a_eps = mgr.historicalRequest('AAPL US Equity', 'BEST_EPS', datetime.datetime(today.year-5, today.month, today.day), today,**para1, overrides = {'BESTFPERIOD_OVERRIDE' : '1BF'})
-##。。。。####
+
+#### change change #######
+###
+#
+#
+#
+
+###########
